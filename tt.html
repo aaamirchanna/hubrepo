@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eazy Buzy</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    
+<style>
+    /* calculator style*/
+
+* {box-sizing: border-box}
+
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 20%;
+  height: 400px;
+  
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 25px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.4rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 400px;
+}
+.tax-calculator-wrapper {
+            width: 400px;
+            padding: 10px 20px;
+        }
+        .main_tax_info_input{
+            height: 30px;
+            width: 200px;
+            border-radius: 20px;
+            border: 1px solid grey;
+            padding: 3px 10px;
+            outline: none;
+            margin-bottom: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    
+        .main_tax_values_wrapper{
+            padding-left: 10px;
+            display: flex;
+            justify-content: space-between;
+            width: auto;
+            justify-items: center;
+            align-content: center;
+        }
+    
+        .main_tax_values_wrapper > h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5rem;
+            margin: 0px;
+            padding: 10px 0px;
+            line-height: 20px;
+        }
+    
+        .main_tax_values_wrapper > .span_edit_s{
+            display: flex;
+            align-items: center;
+            font-size: 10px;
+            font-weight: bold;
+        }
+    
+            @media only screen and (max-width: 1020px) {
+            
+            .main_tax_values_wrapper > h1{
+            font-size: 16px !important;
+            margin: 0px;
+            padding: 10px 0px;
+            line-height: 20px;
+            }
+    
+            .main_tax_values_wrapper > .span_edit_s{
+            display: flex;
+            align-items: center;
+            font-size: 14px !important;
+            font-weight: bold;
+            }
+    
+            .main_tax_info_input{
+                width: 100%;
+            }
+    
+        }
+    
+            @media only screen and (max-width: 900px) {
+            .tax-calculator-wrapper{
+                padding: 10px 0px !important;
+            }
+    
+            .main_tax_values_wrapper{
+                flex-direction: column;
+            }
+            
+            .main_tax_values_wrapper > h1{
+            font-size: 14px !important;
+            margin: 0px;
+            padding: 10px 0px;
+            line-height: 20px;
+            }
+    
+            .main_tax_values_wrapper > .span_edit_s{
+            width: 200px !important;
+            display: flex;
+            align-items: center;
+            font-size: 10px !important;
+            font-weight: bold;
+            border: 1px solid grey;
+            border-radius: 20px;
+            padding: 5px;
+            padding-left: 10px;
+            }
+    
+            .main_tax_info_input{
+                width: 200px !important;
+                padding: 10px;
+            }
+            .main_tax_info_input::placeholder{
+            font-size: 13px;
+          }
+        }
+.taxcal{
+    width: fit-content;
+
+}
+
+</style>
+
+</head>
+<body>
+
+    <!-- header section starts  -->
+
+<header class="header">
+
+    <a href="home.html" class="logo"> <i class="fas fa-graduation-cap"></i> Eazy Buzy </a>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">MCQS</a>
+                <ul>
+                    <li><a href="current affairs.html">Current Affairs</a></li>
+                    <li><a href="g.kpage1.html">G. knowledge</a></li>
+                    <li><a href="everydayscience1.html">Everyday Science</a></li>
+                    <li><a href="english1.html">English</a></li>
+                    <li><a href="maths.html">Maths</a></li>
+                    <li><a href="islamiat.html">Islamiat</a></li>
+                    <li><a href="P.K.html">Pakistan Studies</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Jobs</a>
+                <ul>
+                    <li><a href="teachers.html">Govt Jobs</a></li>
+                    <li><a href="blog.html">Other Jobs</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Study Material </a>
+                <ul>
+                    <li><a href=".html">Computer Science</a></li>
+                    <li><a href=".html">Other courses</a></li>
+                </ul>
+            </li>
+            <li><a href="blog.html">Blogs</a>
+                <ul>
+                </ul>
+            </li>
+            
+            <li><a href="tt.html">Taxation</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- header section ends -->
+
+<section class="heading">
+    <h3>Blogs</h3>
+    <p> <a href="home.html">Home >></a><a href="blog.html">Blog >></a> Python Introduction </p>
+</section>
+
+<!-- course-1 section starts  -->
+<section>
+<h2>Tax Calculator for Tax Year 2021 - 2022</h2>
+<p>Click on the buttons inside the tabbed menu:</p>
+
+<div class="taxcal">
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'salary')" id="defaultOpen">Salary Individual</button>
+  <button class="tablinks" onclick="openCity(event, 'Rental')">Rental</button>
+  <button class="tablinks" onclick="openCity(event, 'Aop')">AOP/Sole Proprietor</button>
+  <button class="tablinks" onclick="openCity(event, 'Agri')">Agricultue</button>
+</div>
+
+<div id="salary" class="tabcontent">
+
+        
+   <div class="tax-calculator-wrapper">
+       <a style="font-size: 1.5rem;"> Enter Amount:    </a><input class="main_tax_info_input amount_input_field" id="salary_main_tax_info_input" placeholder="Enter Your Monthly Salary Here" type="text" autofocus="" oninput="onChangeHandleSalary();">
+        
+        <div class="main_tax_values_wrapper">
+            <h1>Monthly Income : </h1>
+            <span class="span_edit_s" id="salary_Monthly_Income">0</span>
+        </div>
+    
+        <div class="main_tax_values_wrapper">
+            <h1>Monthly Tax : </h1>
+            <span class="span_edit_s" id="salary_Monthly_Tax">0</span>
+        </div>
+    
+        <div class="main_tax_values_wrapper">
+            <h1>Salary After Tax : </h1>
+            <span class="span_edit_s" id="salary_Salary_After_Tax">0</span>
+        </div>
+    
+        <div class="main_tax_values_wrapper">
+            <h1>Yearly Income : </h1>
+            <span class="span_edit_s" id="salary_Yearly_Income">0</span>
+        </div>
+    
+        <div class="main_tax_values_wrapper">
+            <h1>Yearly Tax : </h1>
+            <span class="span_edit_s" id="salary_Yearly_Tax">0</span>
+        </div>
+    
+        <div class="main_tax_values_wrapper">
+            <h1>Yearly Income After Tax : </h1>
+            <span class="span_edit_s" id="salary_Yearly_Income_After_Tax">0</span>
+        </div>
+    
+        </div>
+        
+  </div>
+
+<div id="Rental" class="tabcontent">
+  <div class="tax-calculator-wrapper">
+            <input class="main_tax_info_input amount_input_field" id="rental_main_tax_info_input" placeholder="Enter Your Monthly Rent Here" type="text" autofocus="" oninput="onChangeHandleRental();">
+    
+            <div class="main_tax_values_wrapper">
+                <h1>Monthly Income : </h1>
+                <span class="span_edit_s" id="rental_Monthly_Income">0</span>
+            </div>
+    
+            <div class="main_tax_values_wrapper">
+                <h1>Monthly Tax : </h1>
+                <span class="span_edit_s" id="rental_Monthly_Tax">0</span>
+            </div>
+    
+            <div class="main_tax_values_wrapper">
+                <h1>Income After Tax : </h1>
+                <span class="span_edit_s" id="rental_Salary_After_Tax">0</span>
+            </div>
+    
+            <div class="main_tax_values_wrapper">
+                <h1>Yearly Income : </h1>
+                <span class="span_edit_s" id="rental_Yearly_Income">0</span>
+            </div>
+    
+            <div class="main_tax_values_wrapper">
+                <h1>Yearly Tax : </h1>
+                <span class="span_edit_s" id="rental_Yearly_Tax">0</span>
+            </div>
+    
+            <div class="main_tax_values_wrapper">
+                <h1>Yearly Income After Tax : </h1>
+                <span class="span_edit_s" id="rental_Yearly_Income_After_Tax">0</span>
+            </div>
+    
+        </div>
+</div>
+
+<div id="Aop" class="tabcontent">
+          <div class="tax-calculator-wrapper">
+          <input class="main_tax_info_input amount_input_field" id="business_main_tax_info_input" placeholder="Enter Your Yearly Income Here" type="text" autofocus="" oninput="onChangeHandleBusiness();">
+
+    <div class="main_tax_values_wrapper">
+            <h1>Yearly Income : </h1>
+            <span class="span_edit_s" id="business_Yearly_Income">0</span>
+        </div>
+    
+        <div class="main_tax_values_wrapper">
+            <h1>Yearly Tax : </h1>
+            <span class="span_edit_s" id="business_Yearly_Tax">0</span>
+        </div>
+    
+        <div class="main_tax_values_wrapper">
+            <h1>Yearly Income After Tax : </h1>
+            <span class="span_edit_s" id="business_Yearly_Income_After_Tax">0</span>
+        </div>
+    
+        </div>
+</div>
+
+<div id="Agri" class="tabcontent">
+
+        <div class="tax-calculator-wrapper">
+            <input class="main_tax_info_input amount_input_field" id="agricluture_main_tax_info_input" placeholder="Enter Your Yearly Income Here" autofocus="" type="text" oninput="onChangeHandleAgriculture();">
+
+ <div class="main_tax_values_wrapper">
+                <h1>Yearly Income : </h1>
+                <span class="span_edit_s" id="agricluture_Yearly_Income">0</span>
+            </div>
+    
+            <div class="main_tax_values_wrapper">
+                <h1>Yearly Tax : </h1>
+                <span class="span_edit_s" id="agricluture_Yearly_Tax">0</span>
+            </div>
+    
+            <div class="main_tax_values_wrapper">
+                <h1>Yearly Income After Tax : </h1>
+                <span class="span_edit_s" id="agricluture_Yearly_Income_After_Tax">0</span>
+            </div>
+    
+</div>
+</div>
+</div>
+
+
+</section>   
+
+
+    <div class="credit"> created by <span>Mr. Aamir</span> | all rights reserved! </div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+<script>
+   
+   function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+    }
+    
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+
+    
+
+
+
+
+/* calculator fucntion*/
+function valueRendererSalary (name,val) {
+    name.innerText = new Intl.NumberFormat().format(Math.round(val))
+}
+
+function taxCalclulatorSalary (val) {
+    // 1
+    if (val <= 600000) return 0;
+
+    // 2
+
+    if (val > 600000 && val <= 1200000 ) {
+        const curr = val - 600000;
+        return (curr * 5 / 100)
+    }
+    
+    // 3
+
+    if (val > 1200000  && val <= 1800000 ) {
+        const curr = val - 1200000;
+        return (30000 + (curr * 10 / 100))
+    }
+
+    // 4
+
+    if (val > 1800000 && val <= 2500000) {
+        const curr = val - 1800000;
+        return (90000 + (curr * 15 / 100))
+    }
+
+    // 5
+
+    if (val > 2500000 && val <= 3500000 ) {
+        const curr = val - 2500000;
+        return (195000 + (curr * 17.5 / 100))
+    }
+
+    // 6
+
+    if (val > 3500000  && val <= 5000000 ) {
+        const curr = val - 3500000;
+        return (370000  + (curr * 20 / 100))
+    }
+
+    // 7
+
+    if (val > 5000000  && val <= 8000000 ) {
+        const curr = val - 5000000;
+        return (670000  + (curr * 22.5 / 100))
+    }
+
+    // 8
+
+    if (val > 8000000  && val <= 12000000 ) {
+        const curr = val - 8000000 ;
+        return (1345000  + (curr * 25 / 100))
+    }
+
+    // 9
+
+    if (val > 12000000  && val <= 30000000 ) {
+        const curr = val - 12000000;
+        return (2345000  + (curr * 27.5 / 100))
+    }
+
+    // 10
+
+    if (val > 30000000  && val <= 50000000 ) {
+        const curr = val - 30000000;
+        return (7295000  + (curr * 30 / 100))
+    }
+
+    // 11
+
+    if (val > 50000000  && val <= 75000000 ) {
+        const curr = val - 50000000;
+        return (13295000  + (curr * 32.5 / 100))
+    }
+
+
+    // 12
+
+    if (val > 75000000  ) {
+        const curr = val - 75000000;
+        return (21420000  + (curr * 35 / 100))
+    }
+
+}
+
+function onChangeHandleSalary () {
+    const input = Number(document.getElementById('salary_main_tax_info_input').value);
+    const Monthly_Income =  document.getElementById("salary_Monthly_Income");
+    const Monthly_Tax = document.getElementById("salary_Monthly_Tax");
+    const Salary_After_Tax = document.getElementById("salary_Salary_After_Tax");
+    const Yearly_Income = document.getElementById("salary_Yearly_Income");
+    const Yearly_Tax = document.getElementById("salary_Yearly_Tax");
+    const Yearly_Income_After_Tax = document.getElementById("salary_Yearly_Income_After_Tax");
+
+    // valueRenderer(Monthly_Income, `${input * 1.2 / 100}`)
+    
+    const yearly = input * 12;
+
+    const tax_yealy =  taxCalclulatorSalary (yearly);
+
+
+    valueRendererSalary(Monthly_Income, `${yearly / 12}`);
+
+    valueRendererSalary(Monthly_Tax, `${tax_yealy / 12}`);
+
+    valueRendererSalary(Salary_After_Tax, `${(yearly / 12) - (tax_yealy / 12) }`);
+
+    valueRendererSalary(Yearly_Income, `${yearly}`);
+
+    valueRendererSalary(Yearly_Tax, `${tax_yealy}`);
+
+    valueRendererSalary(Yearly_Income_After_Tax, `${(yearly) - (tax_yealy)}`);
+
+}
+
+function valueRendererRental(name, val) {
+    name.innerText = new Intl.NumberFormat().format(Math.round(val))
+}
+
+function taxCalclulatorRental(val) {
+    // 1
+    if (val <= 300000) return 0;
+
+    // 2
+
+    if (val > 300000 && val <= 600000) {
+        const curr = val - 300000;
+        return (curr * 5 / 100)
+    }
+
+    // 3
+
+    if (val > 600000 && val <= 2000000) {
+        const curr = val - 600000;
+        return (15000 + (curr * 10 / 100))
+    }
+
+ 
+
+    // 4
+
+    if (val > 2000000) {
+        const curr = val - 2000000;
+        return (155000 + (curr * 25 / 100))
+    }
+
+}
+
+function onChangeHandleRental() {
+    const input = Number(document.getElementById('rental_main_tax_info_input').value);
+    const Monthly_Income = document.getElementById("rental_Monthly_Income");
+    const Monthly_Tax = document.getElementById("rental_Monthly_Tax");
+    const Salary_After_Tax = document.getElementById("rental_Salary_After_Tax");
+    const Yearly_Income = document.getElementById("rental_Yearly_Income");
+    const Yearly_Tax = document.getElementById("rental_Yearly_Tax");
+    const Yearly_Income_After_Tax = document.getElementById("rental_Yearly_Income_After_Tax");
+
+    // valueRenderer(Monthly_Income, `${input * 1.2 / 100}`)
+
+    const yearly = input * 12;
+
+    const tax_yealy = taxCalclulatorRental(yearly);
+
+    valueRendererRental(Monthly_Income, `${yearly / 12}`);
+
+    valueRendererRental(Monthly_Tax, `${tax_yealy / 12}`);
+
+    valueRendererRental(Salary_After_Tax, `${(yearly / 12) - (tax_yealy / 12)}`);
+
+    valueRendererRental(Yearly_Income, `${yearly}`);
+
+    valueRendererRental(Yearly_Tax, `${tax_yealy}`);
+
+    valueRendererRental(Yearly_Income_After_Tax, `${(yearly) - (tax_yealy)}`);
+
+}
+
+function valueRendererBusiness (name,val) {
+    name.innerText = new Intl.NumberFormat().format(Math.round(val))
+}
+
+function taxCalclulatorBusiness (val) {
+    
+    // 1
+    if (val <= 400000) return 0;
+
+    // 2
+
+    if (val > 400000 && val <= 600000) {
+        const curr = val - 400000;
+        return (curr * 5 / 100)
+    }
+
+    // 3
+
+    if (val > 600000 && val <= 1200000) {
+        const curr = val - 600000;
+        return (10000 + (curr * 10 / 100))
+    }
+
+    // 4
+
+    if (val > 1200000 && val <= 2400000) {
+        const curr = val - 1200000;
+        return (70000 + (curr * 15 / 100))
+    }
+
+    // 
+
+    if (val > 2400000 && val <= 3000000) {
+        const curr = val - 2400000;
+        return (250000 + (curr * 20 / 100))
+    }
+
+    // 6
+
+    if (val > 3000000 && val <= 4000000) {
+        const curr = val - 3000000;
+        return (370000 + (curr * 25 / 100))
+    }
+
+    // 7
+
+    if (val > 4000000 && val <= 6000000) {
+        const curr = val - 4000000;
+        return (620000 + (curr * 30 / 100))
+    }
+
+
+    if (val > 6000000) {
+        const curr = val - 6000000;
+        return (1220000 + (curr * 35 / 100))
+    }
+
+}
+
+function onChangeHandleBusiness () {
+    const input = Number(document.getElementById('business_main_tax_info_input').value);
+    const Monthly_Income =  document.getElementById("business_Monthly_Income");
+    const Monthly_Tax = document.getElementById("business_Monthly_Tax");
+    const Salary_After_Tax = document.getElementById("business_Salary_After_Tax");
+    const Yearly_Income = document.getElementById("business_Yearly_Income");
+    const Yearly_Tax = document.getElementById("business_Yearly_Tax");
+    const Yearly_Income_After_Tax = document.getElementById("business_Yearly_Income_After_Tax");
+
+    // valueRenderer(Monthly_Income, `${input * 1.2 / 100}`)
+    
+    // const yearly = input * 12;
+
+    const yearly = input;
+
+    const tax_yealy =  taxCalclulatorBusiness (yearly);
+
+    // valueRenderer(Monthly_Income, `${yearly / 12}`);
+
+    // valueRenderer(Monthly_Tax, `${tax_yealy / 12}`);
+
+    // valueRenderer(Salary_After_Tax, `${(yearly / 12) - (tax_yealy / 12) }`);
+
+    valueRendererBusiness(Yearly_Income, `${yearly}`);
+
+    valueRendererBusiness(Yearly_Tax, `${tax_yealy === input ? 0 : tax_yealy }`);
+
+    valueRendererBusiness(Yearly_Income_After_Tax, `${(yearly) - (tax_yealy)}`);
+
+}
+
+function valueRendererAgriculture(name, val) {
+    name.innerText = new Intl.NumberFormat().format(Math.round(val))
+}
+
+function taxCalclulatorAgriculture(val) {
+    // 1
+    if (val <= 400000) return 0;
+
+    // 2
+
+    if (val > 400000 && val <= 800000) {
+        return 1000
+    }
+
+    // 3
+
+    if (val > 800000 && val <= 1200000) {
+        return 2000
+    }
+
+    // 4
+
+    if (val > 1200000 && val <= 2400000) {
+        const curr = val - 1200000;
+        return (curr * 5 / 100)
+    }
+
+    // 5
+
+    if (val > 2400000 && val <= 4800000) {
+        const curr = val - 2400000;
+        return (60000 + (curr * 10 / 100))
+    }
+
+    // 6
+
+
+    if (val > 4800000) {
+        const curr = val - 4800000;
+        return (300000 + (curr * 15 / 100))
+    }
+
+}
+
+function onChangeHandleAgriculture() {
+    const input = Number(document.getElementById('agricluture_main_tax_info_input').value);
+    const Monthly_Income = document.getElementById("agricluture_Monthly_Income");
+    const Monthly_Tax = document.getElementById("agricluture_Monthly_Tax");
+    const Salary_After_Tax = document.getElementById("agricluture_Salary_After_Tax");
+    const Yearly_Income = document.getElementById("agricluture_Yearly_Income");
+    const Yearly_Tax = document.getElementById("agricluture_Yearly_Tax");
+    const Yearly_Income_After_Tax = document.getElementById("agricluture_Yearly_Income_After_Tax");
+
+    // valueRenderer(Monthly_Income, `${input * 1.2 / 100}`)
+
+    // const yearly = input * 12;
+    const yearly = input;
+
+    const tax_yealy = taxCalclulatorAgriculture(yearly);
+
+
+    // valueRenderer(Monthly_Income, `${yearly / 12}`);
+
+    // valueRenderer(Monthly_Tax, `${tax_yealy / 12}`);
+
+    // valueRenderer(Salary_After_Tax, `${(yearly / 12) - (tax_yealy / 12)}`);
+
+    valueRendererAgriculture(Yearly_Income, `${yearly}`);
+
+    valueRendererAgriculture(Yearly_Tax, `${tax_yealy === input ? 0 : tax_yealy }`);
+
+    valueRendererAgriculture(Yearly_Income_After_Tax, `${(yearly) - (tax_yealy)}`);
+
+}
+</script>
+
+</body>
+</html> 
